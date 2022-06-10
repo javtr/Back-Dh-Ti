@@ -15,15 +15,24 @@ public class PacienteController {
 
     @GetMapping("/email")
     public String buscarPacientesEmail (Model model){
-        model.addAttribute("nombre", pacienteService.buscarPorEmail("facu23c@gmail.com"));
+        model.addAttribute("otracosa", pacienteService.buscarPorEmail("facu23c@gmail.com"));
         return "index";
     }
 
     @GetMapping("/lista")
     public String buscarLista(Model model){
-        model.addAttribute("nombre",pacienteService.buscarTodos());
+        model.addAttribute("lista",pacienteService.buscarTodos());
+        model.addAttribute("algo",pacienteService.buscarTodos());
         return "index";
     }
+
+    @GetMapping("/algo")
+    public String buscarLista2(Model model){
+        model.addAttribute("algo",pacienteService.buscarTodos());
+        return "index";
+    }
+
+
 
 
 }
