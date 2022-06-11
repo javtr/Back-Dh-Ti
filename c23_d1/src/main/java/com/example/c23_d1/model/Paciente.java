@@ -11,14 +11,16 @@ public class Paciente {
     private String email;
     private Integer dni;
     private String fecha_ingreso;
+    private Odontologo odontologo;
 
-    public Paciente(Integer id, String apellido, String nombre, String email, Integer dni, String fecha_ingreso) {
+    public Paciente(Integer id, String apellido, String nombre, String email, Integer dni, String fecha_ingreso, Odontologo odontologo) {
         this.id = id;
         this.apellido = apellido;
         this.nombre = nombre;
         this.email = email;
         this.dni = dni;
         this.fecha_ingreso = fecha_ingreso;
+        this.odontologo = odontologo;
     }
 
     public Integer getId() {
@@ -67,6 +69,15 @@ public class Paciente {
 
     public void setFecha_ingreso(String fecha_ingreso) {
         this.fecha_ingreso = fecha_ingreso;
+    }
+
+
+    public Odontologo getOdontologo() {
+        return odontologo;
+    }
+
+    public void setOdontologo(Odontologo odontologo) {
+        this.odontologo = odontologo;
     }
 
     @Override

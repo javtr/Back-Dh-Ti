@@ -32,6 +32,16 @@ public class PacienteController {
         return "index";
     }
 
+    @GetMapping("/odontologos")
+    public String buscarOdontologos(Model model){
+        model.addAttribute("nombre",pacienteService.buscarPorDni(13).getNombre());
+        model.addAttribute("email",pacienteService.buscarPorDni(13).getEmail());
+        model.addAttribute("odontologo",(pacienteService.buscarPorDni(13).getOdontologo().getNombre()+": "+pacienteService.buscarPorDni(13).getOdontologo().getMatricula()));
+
+        return "index";
+    }
+
+
 
 
 
