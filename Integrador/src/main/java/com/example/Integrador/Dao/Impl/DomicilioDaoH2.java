@@ -1,12 +1,14 @@
 package com.example.Integrador.Dao.Impl;
 
+import com.example.Integrador.Dao.IDao;
 import com.example.Integrador.Models.Domicilio;
+import com.example.Integrador.Models.Odontologo;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DomicilioDaoH2 {
+public class DomicilioDaoH2 implements IDao<Domicilio> {
 
     private final static String DB_JDBC_DRIVER = "org.h2.Driver";
     //con la instruccion INIT=RUNSCRIPT cuando se conecta a la base ejecuta el script de sql que esta en dicho archivo
