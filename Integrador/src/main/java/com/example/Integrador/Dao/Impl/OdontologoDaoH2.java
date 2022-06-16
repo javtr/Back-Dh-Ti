@@ -1,7 +1,9 @@
 package com.example.Integrador.Dao.Impl;
 
 import com.example.Integrador.Dao.IDao;
+import com.example.Integrador.Models.Domicilio;
 import com.example.Integrador.Models.Odontologo;
+import com.example.Integrador.Models.Paciente;
 import com.example.Integrador.configuration.ConfiguracionJDBC;
 
 import java.sql.*;
@@ -38,12 +40,16 @@ public class OdontologoDaoH2 implements IDao<Odontologo>
                 connection = conexionBD.conectarConBaseDeDatos();
 
 
-                preparedStatement = connection.prepareStatement("insert into odontologos (matricula, nombre, apellido) VALUES (?,?,?);");
+                preparedStatement = connection.prepareStatement("insert into odontologos (matricula, nombre, apellido) VALUES (?,?,?);", Statement.RETURN_GENERATED_KEYS);
                 preparedStatement.setString(1, odontologo.getMatricula());
                 preparedStatement.setString(2, odontologo.getNombre());
                 preparedStatement.setString(3, odontologo.getApellido());
 
                 preparedStatement.execute();
+                ResultSet keys = preparedStatement.getGeneratedKeys();
+                if(keys.next())
+                    odontologo.setId(keys.getInt(1));
+
                 preparedStatement.close();
 
             } catch (SQLException throwables) {
@@ -54,12 +60,60 @@ public class OdontologoDaoH2 implements IDao<Odontologo>
 
         @Override
         public Odontologo buscar(Integer id) {
-            return null;
+
+            Connection connection = null;
+            PreparedStatement preparedStatement = null;
+            Odontologo odontologo = null;
+            try {
+                //1 Levantar el driver y Conectarnos
+                Class.forName(DB_JDBC_DRIVER);
+                connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
+
+                //2 Crear una sentencia
+                preparedStatement = connection.prepareStatement("SELECT id,matricula,nombre,apellido FROM odontologos where id = ?");
+                preparedStatement.setInt(1,id);
+
+                //3 Ejecutar una sentencia SQL
+                ResultSet result = preparedStatement.executeQuery();
+
+                //4 Obtener resultados
+                while (result.next()) {
+                    int idOdontologo = result.getInt("id");
+                    String matricula = result.getString("matricula");
+                    String nombre = result.getString("nombre");
+                    String apellido = result.getString("apellido");
+
+                    odontologo = new Odontologo(idOdontologo,matricula,nombre,apellido);
+                    System.out.println(idOdontologo);
+                }
+
+                preparedStatement.close();
+            } catch (SQLException | ClassNotFoundException throwables) {
+                throwables.printStackTrace();
+            }
+
+            return odontologo;
         }
 
         @Override
         public void eliminar(Integer id) {
+            Connection connection = null;
+            PreparedStatement preparedStatement = null;
+            try {
+                //1 Levantar el driver y Conectarnos
+                Class.forName(DB_JDBC_DRIVER);
+                connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
 
+                //2 Crear una sentencia
+                preparedStatement = connection.prepareStatement("DELETE FROM odontologos where id = ?");
+                preparedStatement.setInt(1,id);
+
+                //3 Ejecutar una sentencia SQL
+                preparedStatement.executeUpdate();
+                preparedStatement.close();
+            } catch (SQLException | ClassNotFoundException throwables) {
+                throwables.printStackTrace();
+            }
         }
 
 
