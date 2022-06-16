@@ -1,5 +1,4 @@
 package com.example.Integrador.configuration;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -22,9 +21,6 @@ public class ConfiguracionJDBC {
     public ConfiguracionJDBC() {
         this.jdbcDriver = "org.h2.Driver";
         this.dbUrl = "jdbc:h2:~/db_clinica15;INIT=RUNSCRIPT FROM 'create.sql'";
-        //this.dbUrl = "jdbc:h2:~/db_clinica_18;INIT=RUNSCRIPT FROM 'create.sql'";
-        //private final static String DB_URL = "jdbc:h2:~/db_clinica15;INIT=RUNSCRIPT FROM 'create.sql'";
-
         this.nombreUsuario = "sa";
         this.contrasenaUsuario = "sa";
     }
@@ -36,10 +32,6 @@ public class ConfiguracionJDBC {
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
-
-
         return connection;
     }
-
-
 }
