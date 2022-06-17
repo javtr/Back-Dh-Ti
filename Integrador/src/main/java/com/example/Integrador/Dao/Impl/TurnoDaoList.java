@@ -2,6 +2,7 @@ package com.example.Integrador.Dao.Impl;
 
 import com.example.Integrador.Dao.IDao;
 import com.example.Integrador.Models.Turno;
+import com.example.Integrador.Util.Util;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,9 +12,11 @@ public class TurnoDaoList implements IDao<Turno> {
 
     @Override
     public Turno guardar(Turno turno) {
-        turno.setId(turnos.size()+1);
-        turnos.add(turno);
-        return turno;
+        System.out.println(turno.getFecha());
+        System.out.println(Util.utilDateToSqlDate(turno.getFecha()));
+        Turno turnoTemp = new Turno((turnos.size()+1),turno.getPaciente(),turno.getOdontologo(),Util.utilDateToSqlDate(turno.getFecha()));
+        turnos.add(turnoTemp);
+        return turnoTemp;
     }
 
     @Override
