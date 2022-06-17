@@ -10,6 +10,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 public class OdontologoController {
 
@@ -49,7 +51,16 @@ public class OdontologoController {
         return response;
     }
 
+    @PutMapping("/odontologo/actualizar")
+    public ResponseEntity<Odontologo> actualizarOdontologo(@RequestBody Odontologo odontologo){
+        return ResponseEntity.ok(odontologoService.actualizar(odontologo)) ;
+    }
 
+
+    @GetMapping("/odontologo/todos")
+    public List<Odontologo> obtenerTodos(){
+        return odontologoService.buscarTodos();
+    }
 
 
 

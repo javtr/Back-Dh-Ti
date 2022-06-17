@@ -4,6 +4,7 @@ import com.example.Integrador.Dao.IDao;
 import com.example.Integrador.Models.Domicilio;
 import com.example.Integrador.Models.Odontologo;
 import com.example.Integrador.Models.Paciente;
+import com.example.Integrador.Util.Util;
 import com.example.Integrador.configuration.ConfiguracionJDBC;
 
 import java.sql.*;
@@ -155,6 +156,32 @@ public class OdontologoDaoH2 implements IDao<Odontologo>
 
         @Override
         public Odontologo actualizar(Odontologo odontologo) {
-            return null;
+
+            Connection connection = null;
+            PreparedStatement preparedStatement = null;
+
+            try {
+                //1 Levantar el driver y Conectarnos
+                Class.forName(DB_JDBC_DRIVER);
+                connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
+
+                //2 Crear una sentencia especificando que el ID lo auto incrementa la base de datos y que nos devuelva esa Key es decir ID
+                preparedStatement = connection.prepareStatement("UPDATE odontologos SET matricula=?, nombre=?, apellido=? WHERE id = ?");
+                //No le vamos a pasar el ID ya que hicimos que fuera autoincremental en la base de datos
+                //preparedStatement.setInt(1,paciente.getId());
+                preparedStatement.setString(1, odontologo.getMatricula());
+                preparedStatement.setString(2, odontologo.getNombre());
+                preparedStatement.setString(3, odontologo.getApellido());
+                preparedStatement.setInt(4, odontologo.getId());
+
+                //3 Ejecutar una sentencia SQL
+                preparedStatement.executeUpdate();
+                preparedStatement.close();
+
+            } catch (SQLException | ClassNotFoundException throwables) {
+                throwables.printStackTrace();
+            }
+
+            return odontologo;
         }
     }

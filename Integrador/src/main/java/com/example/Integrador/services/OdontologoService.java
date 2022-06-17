@@ -21,9 +21,15 @@ public class OdontologoService {
         return odontologoDaoH2.buscar(id);
     }
 
+    public Odontologo actualizar(Odontologo odontologo) {
+        return odontologoDaoH2.actualizar(odontologo);
+    }
+
+
     public void eliminar(Integer id) {
         odontologoDaoH2.eliminar(id);
     }
+
 
     public List<Odontologo> buscarTodos(){
         return odontologoDaoH2.buscarTodos();

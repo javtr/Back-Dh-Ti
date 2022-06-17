@@ -62,6 +62,9 @@ public class OdontologoDaoH2 implements IDao<Odontologo> {
     @Override
     public void eliminar(Integer id) {
 
+
+        
+
     }
 
 
