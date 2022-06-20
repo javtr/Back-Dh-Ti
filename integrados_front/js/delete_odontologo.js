@@ -1,9 +1,10 @@
-function deleteBy(id)
+function deleteeeBy(id)
 {
           //con fetch invocamos a la API de odontologos con el mÃ©todo DELETE
           //pasandole el id en la URL
+             console.log("llega");
 
-          const url = '/odontologo/borrar/'+ id;
+          const url = 'localhost:8080/odontologo/borrar/'+ id;
 
           const settings = {
               method: 'DELETE'

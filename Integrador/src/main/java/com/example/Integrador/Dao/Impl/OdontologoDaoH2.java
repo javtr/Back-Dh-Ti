@@ -59,6 +59,9 @@ public class OdontologoDaoH2 implements IDao<Odontologo>
             return odontologo;
         }
 
+
+
+
         @Override
         public Odontologo buscar(Integer id) {
 

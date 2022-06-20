@@ -1,11 +1,13 @@
 window.addEventListener('load', function () {
-/*
+
 
     //Buscamos y obtenemos el formulario donde estan
     //los datos que el usuario pudo haber modificado del odontolohgo
     const formulario = document.querySelector('#update_odontologo_form');
 
     formulario.addEventListener('submit', function (event) {
+     event.preventDefault();
+
         let peliculaId = document.querySelector('#odontologo_id').value;
 
         //creamos un JSON que tendrá los datos del odontologo
@@ -21,7 +23,7 @@ window.addEventListener('load', function () {
 
         //invocamos utilizando la función fetch la API odontologos con el método PUT que modificará
         //al odontologo que enviaremos en formato JSON
-        const url = '/odontologos';
+        const url = '/odontologo/actualizar';
         const settings = {
             method: 'PUT',
             headers: {
@@ -35,19 +37,16 @@ window.addEventListener('load', function () {
     })
 
 
-    */
  })
 
 
 
 
-/*
-
     //Es la funcion que se invoca cuando se hace click sobre el id de un odontologo del listado
     //se encarga de llenar el formulario con los datos del odontologo
     //que se desea modificar
     function findBy(id) {
-          const url = '/odontologos'+"/"+id;
+          const url = '/odontologo'+"/"+id;
           const settings = {
               method: 'GET'
           }
@@ -65,5 +64,3 @@ window.addEventListener('load', function () {
               alert("Error: " + error);
           })
       }
-
-      */

@@ -2,8 +2,6 @@
 
 window.addEventListener('load', function () {
 
-/*
-
     //Al cargar la pagina buscamos y obtenemos el formulario donde estarán
     //los datos que el usuario cargará del nuevo odontologo
     const formulario = document.querySelector('#add_new_odontologo');
@@ -11,6 +9,7 @@ window.addEventListener('load', function () {
     //Ante un submit del formulario se ejecutará la siguiente funcion
     formulario.addEventListener('submit', function (event) {
 
+ event.preventDefault();
        //creamos un JSON que tendrá los datos de un nuevo odontologo
         const formData = {
             nombre: document.querySelector('#nombre').value,
@@ -20,7 +19,7 @@ window.addEventListener('load', function () {
         };
         //invocamos utilizando la función fetch la API peliculas con el método POST que guardará
         //la película que enviaremos en formato JSON
-        const url = '/odontologos';
+        const url = '/odontologo/nuevo';
         const settings = {
             method: 'POST',
             headers: {
@@ -73,7 +72,7 @@ window.addEventListener('load', function () {
         }
     })();
 
-   */
+
 
 });
 
