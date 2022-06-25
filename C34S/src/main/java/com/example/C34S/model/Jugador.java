@@ -1,5 +1,4 @@
 package com.example.C34S.model;
-
 import javax.persistence.*;
 
 @Entity

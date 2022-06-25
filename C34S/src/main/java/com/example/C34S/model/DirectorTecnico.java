@@ -1,5 +1,4 @@
 package com.example.C34S.model;
-
 import javax.persistence.*;
 import java.util.List;
 
@@ -13,7 +12,7 @@ public class DirectorTecnico {
     private Integer edad;
 
     //Relacion 1 a N con Jugador (UNIDIRECCIONAL)
-    @OneToMany(fetch = FetchType.LAZY)
+    @OneToMany(fetch = FetchType.EAGER,cascade = CascadeType.ALL)
     @JoinColumn(name = "tecnico_id")
     private List<Jugador> jugadores;
 

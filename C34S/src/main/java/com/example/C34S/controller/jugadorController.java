@@ -18,6 +18,7 @@ public class jugadorController {
         ResponseEntity<Jugador> response;
 
         System.out.println(nombre);
+        System.out.println("name: "+jugadorService.buscarPorNombre(nombre));
 
         if (jugadorService.buscarPorNombre(nombre)!=null){
             response = ResponseEntity.ok(jugadorService.buscarPorNombre(nombre)) ;
