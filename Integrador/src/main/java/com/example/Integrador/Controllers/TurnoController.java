@@ -8,6 +8,7 @@ import com.example.Integrador.Models.Turno;
 import com.example.Integrador.services.OdontologoService;
 import com.example.Integrador.services.PacienteService;
 import com.example.Integrador.services.TurnoService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -18,8 +19,9 @@ public class TurnoController {
 
     private TurnoService turnoService= new TurnoService(new TurnoDaoList());
     private OdontologoService odontologoService= new OdontologoService(new OdontologoDaoH2());
-    private PacienteService pacienteService= new PacienteService(new PacienteDaoH2());
-
+    //private PacienteService pacienteService= new PacienteService(new PacienteDaoH2());
+    @Autowired
+    private PacienteService pacienteService;
 
 
     @GetMapping("buscar/{id}")

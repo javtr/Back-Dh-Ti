@@ -1,14 +1,22 @@
 package com.example.Integrador.Models;
-
+import javax.persistence.*;
 import java.util.Date;
 
+@Entity
+@Table(name = "pacientes")
 public class Paciente {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "pacientes_secuencia")
     private Integer id;
     private String nombre;
     private String apellido;
     private String dni;
     private Date fechaIngreso;
+
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "domicilio_id")
     private Domicilio domicilio;
 
     public Paciente() {

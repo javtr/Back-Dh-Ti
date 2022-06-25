@@ -3,6 +3,7 @@ import com.example.Integrador.Dao.Impl.PacienteDaoH2;
 import com.example.Integrador.Models.Domicilio;
 import com.example.Integrador.Models.Paciente;
 import com.example.Integrador.services.PacienteService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -15,7 +16,10 @@ import java.util.List;
 public class PacienteController {
 
 
-private PacienteService pacienteService = new PacienteService(new PacienteDaoH2());
+//private PacienteService pacienteService = new PacienteService(new PacienteDaoH2());
+
+@Autowired
+private PacienteService pacienteService;
 
     @GetMapping("/todos")
     public List<Paciente> obtenerTodos(){
