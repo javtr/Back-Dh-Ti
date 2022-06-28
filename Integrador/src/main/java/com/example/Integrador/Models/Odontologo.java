@@ -1,13 +1,24 @@
 package com.example.Integrador.Models;
+import javax.persistence.*;
+import java.util.List;
 
+@Entity
+@Table(name = "odontologos")
 public class Odontologo {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "odontologo_secuencia")
     private Integer id;
     private String matricula;
     private String nombre;
     private String apellido;
 
-    public Odontologo() {
+    /*
+    @OneToMany(mappedBy ="odontologo", cascade = CascadeType.ALL)
+    private List<Paciente> pacientes;
+*/
 
+    public Odontologo() {
     }
 
     public Odontologo(Integer id, String matricula, String nombre, String apellido) {
@@ -22,8 +33,6 @@ public class Odontologo {
         this.nombre = nombre;
         this.apellido = apellido;
     }
-
-
 
     public Integer getId() {
         return id;

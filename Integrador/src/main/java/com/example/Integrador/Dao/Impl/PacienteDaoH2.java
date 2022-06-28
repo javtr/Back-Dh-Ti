@@ -93,9 +93,15 @@ public class PacienteDaoH2 implements IDao<Paciente> {
 
     @Override
     public Paciente buscar(Integer id) {
+
+
+
         Connection connection = null;
         PreparedStatement preparedStatement = null;
         Paciente paciente = null;
+
+        /*
+
         try {
             //1 Levantar el driver y Conectarnos
             Class.forName(DB_JDBC_DRIVER);
@@ -126,6 +132,8 @@ public class PacienteDaoH2 implements IDao<Paciente> {
             throwables.printStackTrace();
         }
 
+        */
+
         return paciente;
     }
 
@@ -134,6 +142,9 @@ public class PacienteDaoH2 implements IDao<Paciente> {
         Connection connection = null;
         PreparedStatement preparedStatement = null;
         List<Paciente> pacientes = new ArrayList<>();
+
+        /*
+
         try {
             //1 Levantar el driver y Conectarnos
             Class.forName(DB_JDBC_DRIVER);
@@ -164,6 +175,9 @@ public class PacienteDaoH2 implements IDao<Paciente> {
         } catch (SQLException | ClassNotFoundException throwables) {
             throwables.printStackTrace();
         }
+
+
+        */
 
         return pacientes;
     }

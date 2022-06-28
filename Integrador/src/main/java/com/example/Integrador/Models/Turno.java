@@ -1,18 +1,28 @@
 package com.example.Integrador.Models;
-
+import javax.persistence.*;
 import java.util.Date;
 
+@Entity
+@Table(name = "turnos")
 public class Turno {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "turno_secuencia")
     private Integer id;
+
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "paciente_id")
     private Paciente paciente;
+
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "odontologo_id")
     private Odontologo odontologo;
     private Date fecha;
 
-
     public Turno() {
     }
-
 
     public Turno(Integer id, Paciente paciente, Odontologo odontologo, Date fecha) {
         this.id = id;
@@ -26,9 +36,6 @@ public class Turno {
         this.odontologo = odontologo;
         this.fecha = fecha;
     }
-
-
-
 
     public Integer getId() {
         return id;

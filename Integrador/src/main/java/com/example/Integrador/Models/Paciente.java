@@ -14,6 +14,11 @@ public class Paciente {
     private String dni;
     private Date fechaIngreso;
 
+    /*
+    @ManyToOne(fetch=FetchType.LAZY)
+    @JoinColumn(name="odontolog_id",nullable = false)
+    private Odontologo odontologo;
+*/
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "domicilio_id")
@@ -38,6 +43,7 @@ public class Paciente {
         this.dni = dni;
         this.fechaIngreso = fechaIngreso;
         this.domicilio = domicilio;
+
     }
 
 

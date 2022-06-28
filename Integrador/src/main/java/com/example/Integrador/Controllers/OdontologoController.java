@@ -6,6 +6,7 @@ import com.example.Integrador.Models.Odontologo;
 import com.example.Integrador.Models.Paciente;
 import com.example.Integrador.services.OdontologoService;
 import com.example.Integrador.services.PacienteService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -15,8 +16,10 @@ import java.util.List;
 @RestController
 public class OdontologoController {
 
-    private OdontologoService odontologoService = new OdontologoService(new OdontologoDaoH2());
+    //private OdontologoService odontologoService = new OdontologoService(new OdontologoDaoH2());
 
+    @Autowired
+    private OdontologoService odontologoService;
 
     @PostMapping("/odontologo/nuevo")
     public ResponseEntity<Odontologo> nuevoOdontologo(@RequestBody Odontologo odontologo){
@@ -38,7 +41,6 @@ public class OdontologoController {
         return response;
     }
 
-
     @DeleteMapping("/odontologo/borrar/{id}")
     public ResponseEntity<String> eliminarOdontologo(@PathVariable Integer id){
         ResponseEntity<String> response;
@@ -56,13 +58,8 @@ public class OdontologoController {
         return ResponseEntity.ok(odontologoService.actualizar(odontologo)) ;
     }
 
-
     @GetMapping("/odontologo/todos")
     public List<Odontologo> obtenerTodos(){
         return odontologoService.buscarTodos();
     }
-
-
-
-
 }
