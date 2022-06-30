@@ -18,25 +18,17 @@ public class PacienteService {
     private PacienteRepository pacienteRepository;
 
 
-    /*
-    public PacienteService(IDao<Paciente> pacienteIDao) {
-        this.pacienteIDao = pacienteIDao;
-    }
-*/
     public PacienteService(PacienteRepository pacienteRepository) {
         this.pacienteRepository = pacienteRepository;
     }
 
     public Paciente guardar(Paciente p) {
         p.setFechaIngreso(new Date());
-
         return pacienteRepository.save(p);
-        //return pacienteIDao.guardar(p);
     }
 
     public Paciente buscar(Integer id) {
         return pacienteRepository.findById(id).get();
-        //return pacienteIDao.buscar(id);
     }
 
     public List<Paciente> buscarTodos() {
@@ -46,11 +38,9 @@ public class PacienteService {
 
     public void eliminar(Integer id) {
         pacienteRepository.deleteById(id);
-        //pacienteIDao.eliminar(id);
     }
 
     public Paciente actualizar(Paciente p) {
         return pacienteRepository.save(p);
-        //return pacienteIDao.actualizar(p);
     }
 }

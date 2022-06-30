@@ -48,7 +48,6 @@ private PacienteService pacienteService;
 
     @DeleteMapping("/borrar/{id}")
     public ResponseEntity<String> eliminar(@PathVariable Integer id){
-        System.out.println("algo");
         ResponseEntity<String> response;
         pacienteService.eliminar(id);
         response= ResponseEntity.status(HttpStatus.OK).body("Eliminado");
