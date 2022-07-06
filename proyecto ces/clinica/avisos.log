@@ -1,0 +1,169 @@
+[2022-06-1519:46:46] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-1519:46:47] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-1519:46:47] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-1621:43:53] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-1621:44:05] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-1621:44:47] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-1621:44:47] [ INFO ] [DomicilioDaoH2:29] Empezamos a conectar la base de datos
+[2022-06-1621:44:47] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-1621:44:47] [ INFO ] [DomicilioDaoH2:32] Conexión exitosa
+[2022-06-1621:45:10] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-1621:45:10] [ INFO ] [OdontologoDaoH2:57] Se está realizando la consulta
+[2022-06-1621:45:10] [ INFO ] [OdontologoDaoH2:68] La consulta se realizo con exito
+[2022-06-1621:46:08] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-1621:46:08] [ INFO ] [OdontologoDaoH2:57] Se está realizando la consulta
+[2022-06-1621:46:08] [ INFO ] [OdontologoDaoH2:68] La consulta se realizo con exito
+[2022-06-1621:51:37] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-1621:51:37] [ INFO ] [OdontologoDaoH2:57] Se está realizando la consulta
+[2022-06-1621:51:37] [ INFO ] [OdontologoDaoH2:68] La consulta se realizo con exito
+[2022-06-1718:30:43] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-1718:30:43] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-1718:31:00] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-1718:31:00] [ INFO ] [OdontologoDaoH2:56] Se está realizando la consulta
+[2022-06-1718:31:00] [ INFO ] [OdontologoDaoH2:67] La consulta se realizo con exito
+[2022-06-1718:53:34] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-1718:53:34] [ INFO ] [OdontologoDaoH2:37] Se han insertado datos en la tabla
+[2022-06-1718:56:10] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-1718:56:21] [ INFO ] [OdontologoDaoH2:56] Se está realizando la consulta
+[2022-06-1718:56:21] [ INFO ] [OdontologoDaoH2:67] La consulta se realizo con exito
+[2022-06-1718:58:24] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-1718:58:24] [ INFO ] [OdontologoDaoH2:37] Se han insertado datos en la tabla
+[2022-06-1718:58:33] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-1718:58:33] [ INFO ] [OdontologoDaoH2:56] Se está realizando la consulta
+[2022-06-1718:58:33] [ INFO ] [OdontologoDaoH2:67] La consulta se realizo con exito
+[2022-06-1719:00:22] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-1719:03:48] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-1719:05:15] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-1719:05:15] [ INFO ] [OdontologoDaoH2:56] Se está realizando la consulta
+[2022-06-1719:06:14] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-1719:06:14] [ INFO ] [OdontologoDaoH2:56] Se está realizando la consulta
+[2022-06-1719:06:14] [ INFO ] [OdontologoDaoH2:67] La consulta se realizo con exito
+[2022-06-1719:08:31] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-1719:27:53] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-1719:27:53] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2010:40:56] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2010:40:56] [ INFO ] [OdontologoDaoH2:56] Se está realizando la consulta
+[2022-06-2010:40:56] [ INFO ] [OdontologoDaoH2:67] La consulta se realizo con exito
+[2022-06-2010:41:06] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2010:41:11] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2010:41:11] [ INFO ] [OdontologoDaoH2:56] Se está realizando la consulta
+[2022-06-2010:41:11] [ INFO ] [OdontologoDaoH2:67] La consulta se realizo con exito
+[2022-06-2010:44:06] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2010:44:13] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2010:44:13] [ INFO ] [OdontologoDaoH2:56] Se está realizando la consulta
+[2022-06-2010:44:13] [ INFO ] [OdontologoDaoH2:67] La consulta se realizo con exito
+[2022-06-2011:58:36] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2011:58:36] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2011:58:41] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2011:58:41] [ INFO ] [OdontologoDaoH2:58] Se está realizando la consulta
+[2022-06-2011:58:41] [ INFO ] [OdontologoDaoH2:69] La consulta se realizo con exito
+[2022-06-2012:00:57] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2012:00:57] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2012:01:03] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2012:01:03] [ INFO ] [OdontologoDaoH2:58] Se está realizando la consulta
+[2022-06-2012:01:03] [ INFO ] [OdontologoDaoH2:69] La consulta se realizo con exito
+[2022-06-2012:10:26] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2012:10:26] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2012:11:31] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2012:11:32] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2012:11:38] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2012:11:38] [ INFO ] [OdontologoDaoH2:58] Se está realizando la consulta
+[2022-06-2012:11:38] [ INFO ] [OdontologoDaoH2:69] La consulta se realizo con exito
+[2022-06-2012:12:23] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2012:12:23] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2012:13:21] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2012:13:21] [ INFO ] [DomicilioDaoH2:29] Empezamos a conectar la base de datos
+[2022-06-2012:13:21] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2012:13:21] [ INFO ] [DomicilioDaoH2:32] Conexión exitosa
+[2022-06-2012:13:26] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2012:13:26] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2012:13:26] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2012:13:46] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2012:13:46] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2012:13:46] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2012:13:50] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2012:13:50] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2012:25:50] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2012:26:10] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2012:26:10] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2012:26:24] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2012:26:31] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2012:26:31] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2012:27:48] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2012:27:58] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2012:27:58] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2012:28:15] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2012:28:15] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2012:28:15] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2012:28:15] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2012:28:19] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2012:28:19] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2020:40:40] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2020:40:40] [ INFO ] [OdontologoDaoH2:58] Se está realizando la consulta
+[2022-06-2020:40:40] [ INFO ] [OdontologoDaoH2:69] La consulta se realizo con exito
+[2022-06-2020:41:14] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2020:41:14] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2021:15:04] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2021:15:41] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2021:15:41] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2021:15:41] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2022:15:06] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2022:15:06] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2022:15:06] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2022:15:57] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2022:15:57] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2022:15:57] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2022:18:21] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2022:18:21] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2022:18:21] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2022:23:21] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2022:23:22] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2022:23:22] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2022:23:39] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2022:23:39] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2022:23:39] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2022:32:17] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2022:32:17] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2022:32:17] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2022:32:22] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2022:32:22] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2022:32:22] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2022:32:41] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2022:32:41] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2022:32:41] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2022:36:56] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2022:36:56] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2022:36:56] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2109:07:05] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2109:07:06] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2109:07:06] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2109:09:29] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2109:09:29] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2109:09:29] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2109:13:08] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2109:13:08] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2109:13:08] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2109:51:53] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2109:51:53] [ INFO ] [OdontologoDaoH2:58] Se está realizando la consulta
+[2022-06-2109:51:53] [ INFO ] [OdontologoDaoH2:69] La consulta se realizo con exito
+[2022-06-2109:52:24] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2109:52:33] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2109:52:33] [ INFO ] [OdontologoDaoH2:58] Se está realizando la consulta
+[2022-06-2109:52:33] [ INFO ] [OdontologoDaoH2:69] La consulta se realizo con exito
+[2022-06-2109:52:59] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2109:53:08] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2109:53:08] [ INFO ] [OdontologoDaoH2:58] Se está realizando la consulta
+[2022-06-2109:53:08] [ INFO ] [OdontologoDaoH2:69] La consulta se realizo con exito
+[2022-06-2109:57:37] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2109:57:37] [ INFO ] [OdontologoDaoH2:39] Se han insertado datos en la tabla
+[2022-06-2109:58:02] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2109:58:02] [ INFO ] [OdontologoDaoH2:58] Se está realizando la consulta
+[2022-06-2109:58:02] [ INFO ] [OdontologoDaoH2:69] La consulta se realizo con exito
+[2022-06-2110:05:06] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2110:05:06] [ INFO ] [OdontologoDaoH2:58] Se está realizando la consulta
+[2022-06-2110:05:06] [ INFO ] [OdontologoDaoH2:69] La consulta se realizo con exito
+[2022-06-2110:06:45] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2110:06:45] [ INFO ] [OdontologoDaoH2:39] Se han insertado datos en la tabla
+[2022-06-2110:06:46] [ INFO ] [DataBaseSettings:38] Conexión exitosa
+[2022-06-2110:06:46] [ INFO ] [OdontologoDaoH2:58] Se está realizando la consulta
+[2022-06-2110:06:46] [ INFO ] [OdontologoDaoH2:69] La consulta se realizo con exito

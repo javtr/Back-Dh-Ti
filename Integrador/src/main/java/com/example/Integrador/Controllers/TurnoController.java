@@ -1,5 +1,6 @@
 package com.example.Integrador.Controllers;
 import com.example.Integrador.Models.Turno;
+import com.example.Integrador.exceptions.ResourceNotFoundException;
 import com.example.Integrador.services.OdontologoService;
 import com.example.Integrador.services.PacienteService;
 import com.example.Integrador.services.TurnoService;
@@ -22,7 +23,7 @@ public class TurnoController {
     private OdontologoService odontologoService;
 
     @GetMapping("buscar/{id}")
-    public ResponseEntity<Turno>buscar(@PathVariable Integer id){
+    public ResponseEntity<Turno>buscar(@PathVariable Integer id) throws ResourceNotFoundException {
         return ResponseEntity.ok(turnoService.buscar(id));
     }
 

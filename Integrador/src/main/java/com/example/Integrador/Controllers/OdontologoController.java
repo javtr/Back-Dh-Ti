@@ -1,5 +1,6 @@
 package com.example.Integrador.Controllers;
 import com.example.Integrador.Models.Odontologo;
+import com.example.Integrador.exceptions.ResourceNotFoundException;
 import com.example.Integrador.services.OdontologoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -20,14 +21,15 @@ public class OdontologoController {
     }
 
     @GetMapping("/odontologo/{id}")
-    public ResponseEntity<Odontologo> buscarOdontologo(@PathVariable Integer id){
+    public ResponseEntity<Odontologo> buscarOdontologo (@PathVariable Integer id) throws ResourceNotFoundException{
         ResponseEntity<Odontologo> response;
 
         if (odontologoService.buscar(id)!=null){
             response = ResponseEntity.ok(odontologoService.buscar(id)) ;
         }else
         {
-            response = ResponseEntity.status(418).build();
+            throw new ResourceNotFoundException("error odontologo: ");
+            //response = ResponseEntity.status(418).build();
         }
 
         return response;
