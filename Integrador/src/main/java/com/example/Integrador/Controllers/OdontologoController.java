@@ -10,17 +10,18 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@RequestMapping("odontologo/")
 public class OdontologoController {
 
     @Autowired
     private OdontologoService odontologoService;
 
-    @PostMapping("/odontologo/nuevo")
+    @PostMapping("/nuevo")
     public ResponseEntity<Odontologo> nuevoOdontologo(@RequestBody Odontologo odontologo){
         return ResponseEntity.ok(odontologoService.guardar(odontologo)) ;
     }
 
-    @GetMapping("/odontologo/{id}")
+    @GetMapping("/{id}")
     public ResponseEntity<Odontologo> buscarOdontologo (@PathVariable Integer id) throws ResourceNotFoundException{
         ResponseEntity<Odontologo> response;
 
@@ -28,14 +29,13 @@ public class OdontologoController {
             response = ResponseEntity.ok(odontologoService.buscar(id)) ;
         }else
         {
-            throw new ResourceNotFoundException("error odontologo: ");
-            //response = ResponseEntity.status(418).build();
+            throw new ResourceNotFoundException("no se encuentra odontologo: ");
         }
 
         return response;
     }
 
-    @DeleteMapping("/odontologo/borrar/{id}")
+    @DeleteMapping("/borrar/{id}")
     public ResponseEntity<String> eliminarOdontologo(@PathVariable Integer id){
         ResponseEntity<String> response;
 
@@ -44,17 +44,17 @@ public class OdontologoController {
         if (odontologoService.buscar(id)==null) {
             response = ResponseEntity.status(HttpStatus.OK).body("Eliminado");
         }else {
-            response = ResponseEntity.status(HttpStatus.NOT_FOUND).body("nokas");
+            response = ResponseEntity.status(HttpStatus.NOT_FOUND).body("Odontologo no fue eliminado");
         }
         return response;
     }
 
-    @PutMapping("/odontologo/actualizar")
+    @PutMapping("/actualizar")
     public ResponseEntity<Odontologo> actualizarOdontologo(@RequestBody Odontologo odontologo){
         return ResponseEntity.ok(odontologoService.actualizar(odontologo)) ;
     }
 
-    @GetMapping("/odontologo/todos")
+    @GetMapping("/todos")
     public List<Odontologo> obtenerTodos(){
         return odontologoService.buscarTodos();
     }

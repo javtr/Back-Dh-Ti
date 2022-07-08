@@ -3,11 +3,13 @@ package com.example.Integrador.services;
 import com.example.Integrador.Dao.IDao;
 import com.example.Integrador.Dao.Impl.PacienteRepository;
 import com.example.Integrador.Models.Paciente;
+import com.example.Integrador.Models.Turno;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class PacienteService {
@@ -28,8 +30,19 @@ public class PacienteService {
     }
 
     public Paciente buscar(Integer id) {
-        return pacienteRepository.findById(id).get();
+        Paciente paciente = null;
+
+        Optional<Paciente> optionalPaciente = pacienteRepository.findById(id);
+        if (optionalPaciente.isPresent()){
+            paciente = optionalPaciente.get();
+        }
+        return paciente;
+
+       // return pacienteRepository.findById(id).get();
     }
+
+
+
 
     public List<Paciente> buscarTodos() {
         return pacienteRepository.findAll();
