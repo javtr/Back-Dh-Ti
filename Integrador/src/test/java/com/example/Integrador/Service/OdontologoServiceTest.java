@@ -16,7 +16,6 @@ import javax.transaction.Transactional;
 import java.util.List;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-//@RunWith(SpringRunner.class)
 @SpringBootTest
 @Transactional
 public class OdontologoServiceTest {

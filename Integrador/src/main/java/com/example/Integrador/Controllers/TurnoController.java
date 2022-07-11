@@ -62,7 +62,7 @@ public class TurnoController {
         return response;
     }
 
-    
+
 
     @ExceptionHandler({BadRequestException.class})
     public ResponseEntity<String> procesarErrorBadRequest(BadRequestException ex){
