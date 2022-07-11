@@ -46,4 +46,13 @@ public class TurnoService {
         return turnoRepository.save(turno);
 
     }
+
+
+    public void eliminar(Integer id) {
+        turnoRepository.deleteById(id);
+    }
+
+
+
+
 }

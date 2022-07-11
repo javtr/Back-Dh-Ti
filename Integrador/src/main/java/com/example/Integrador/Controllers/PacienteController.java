@@ -2,6 +2,7 @@ package com.example.Integrador.Controllers;
 import com.example.Integrador.Dao.Impl.PacienteDaoH2;
 import com.example.Integrador.Models.Domicilio;
 import com.example.Integrador.Models.Paciente;
+import com.example.Integrador.exceptions.ResourceNotFoundException;
 import com.example.Integrador.services.PacienteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -14,9 +15,6 @@ import java.util.List;
 
 @RestController
 public class PacienteController {
-
-
-//private PacienteService pacienteService = new PacienteService(new PacienteDaoH2());
 
 @Autowired
 private PacienteService pacienteService;
@@ -36,24 +34,33 @@ private PacienteService pacienteService;
     @PostMapping("/actualizar")
     public ResponseEntity<Paciente> actualizar(@RequestBody Paciente paciente){
         ResponseEntity<Paciente> response;
-        //Verificar si el ID es distinto de NULL y si el paciente existe
         if (paciente.getId() != null && pacienteService.buscar(paciente.getId()) != null){
             response= ResponseEntity.ok(pacienteService.actualizar(paciente));
-           // response= ResponseEntity.accepted().build();
         }else{
             response= ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
         return response;
     }
 
+
     @DeleteMapping("/borrar/{id}")
-    public ResponseEntity<String> eliminar(@PathVariable Integer id){
+    public ResponseEntity<String> eliminar(@PathVariable Integer id)throws ResourceNotFoundException{
         ResponseEntity<String> response;
-        pacienteService.eliminar(id);
-        response= ResponseEntity.status(HttpStatus.OK).body("Eliminado");
+
+        if (pacienteService.buscar(id)!=null) {
+            pacienteService.eliminar(id);
+        }else {
+            throw new ResourceNotFoundException("el paciente no existe: ");
+        }
+
+        if (pacienteService.buscar(id)==null) {
+            response= ResponseEntity.status(HttpStatus.OK).body("Eliminado");
+        }else {
+            throw new ResourceNotFoundException("no se elimino el  paciente: ");
+        }
+
         return response;
     }
-
 
 
     @GetMapping("/buscar/{id}")

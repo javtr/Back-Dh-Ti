@@ -35,19 +35,27 @@ public class OdontologoController {
         return response;
     }
 
+
     @DeleteMapping("/borrar/{id}")
-    public ResponseEntity<String> eliminarOdontologo(@PathVariable Integer id){
+    public ResponseEntity<String> eliminarOdontologo(@PathVariable Integer id)throws ResourceNotFoundException {
         ResponseEntity<String> response;
 
-        odontologoService.eliminar(id);
+        if (odontologoService.buscar(id)!=null) {
+            odontologoService.eliminar(id);
+        }else {
+            throw new ResourceNotFoundException("el odontologo no existe: ");
+        }
+
 
         if (odontologoService.buscar(id)==null) {
             response = ResponseEntity.status(HttpStatus.OK).body("Eliminado");
         }else {
-            response = ResponseEntity.status(HttpStatus.NOT_FOUND).body("Odontologo no fue eliminado");
+            throw new ResourceNotFoundException("no se elimino el  odontologo: ");
         }
         return response;
     }
+
+
 
     @PutMapping("/actualizar")
     public ResponseEntity<Odontologo> actualizarOdontologo(@RequestBody Odontologo odontologo){

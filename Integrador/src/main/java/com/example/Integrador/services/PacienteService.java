@@ -14,9 +14,6 @@ import java.util.Optional;
 @Service
 public class PacienteService {
 
-    //private IDao<Paciente> pacienteIDao;
-
-
     private PacienteRepository pacienteRepository;
 
 
@@ -37,21 +34,19 @@ public class PacienteService {
             paciente = optionalPaciente.get();
         }
         return paciente;
-
-       // return pacienteRepository.findById(id).get();
     }
-
-
 
 
     public List<Paciente> buscarTodos() {
         return pacienteRepository.findAll();
-        //return pacienteIDao.buscarTodos();
     }
 
     public void eliminar(Integer id) {
         pacienteRepository.deleteById(id);
     }
+
+
+
 
     public Paciente actualizar(Paciente p) {
         return pacienteRepository.save(p);
